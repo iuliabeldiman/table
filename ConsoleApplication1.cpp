@@ -157,4 +157,64 @@ int board()
 	fillellipse(348, 372, 12, 12);
 	fillellipse(348, 348, 12, 12);
 
-	
+	/* message area */
+	setcolor(BROWN);
+	rectangle(10, 427, 215, 467);
+	outtextxy(11, 416, "MESSAGE DISPLAY AREA");
+	setcolor(WHITE);
+	outtextxy(50, 440, "BACKGAMMON FURY");
+	setcolor(GREEN);
+	outtextxy(44, 452, "BY IULIA BELDIMAN”);
+
+		/* Dice */
+		setcolor(GREEN);
+	outtextxy(244, 160, "DICE");
+	rectangle(243, 172, 333, 212);
+	setcolor(YELLOW);
+	setfillstyle(SOLID_FILL, GREEN);
+	rectangle(248, 177, 278, 207);
+	setcolor(RED);
+	setfillstyle(SOLID_FILL, RED);
+	rectangle(298, 177, 328, 207);
+	/* TEXT BOX FOR PLAYER 1 */
+	setcolor(RED);
+	rectangle(420, 28, 500, 56);
+	outtextxy(420, 7, "PLAYER 1");
+	outtextxy(425, 39, "name1");
+	rectangle(505, 28, 580, 56);
+	outtextxy(505, 7, "SCORE");
+	/* TEXT BOX FOR PLAYER 2 */
+	setcolor(YELLOW);
+	rectangle(420, 80, 500, 109);
+	outtextxy(420, 60, "PLAYER 2");
+	outtextxy(425, 91, "name2");
+	rectangle(505, 80, 580, 109);
+	outtextxy(505, 60, "SCORE");
+	/* MENU BAR */
+	setcolor(WHITE);
+	outtextxy(465, 140, "MENU");
+	setcolor(CYAN);
+	rectangle(450, 157, 530, 188);
+	outtextxy(459, 165, "START");
+	rectangle(450, 200, 530, 232);
+	outtextxy(459, 209, "RESTART");
+	rectangle(450, 243, 530, 276);
+	(455, 253, "ROLL DICE");
+	rectangle(450, 286, 530, 319);
+	outtextxy(459, 297, "QUIT");
+	return 0;
+}
+void main()
+{
+	int gd = DETECT, gm;
+	initgraph(&gd, &gm, "c:\\tc\\bgi");
+	welcome();
+	getch();
+	closegraph();
+}
+
+
+
+
+
+
