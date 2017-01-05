@@ -71,7 +71,7 @@ int board()
 	int p4[18] = { 24,384,36,256,48,384,72,384,84,256,96,384,120,384,132,256,144,384 };
 	int p5[18] = { 48,384,60,256,72,384,96,384,108,256,120,384,144,384,156,256,168,384 };
 	int p6[18] = { 216,384,228,256,240,384,264,384,276,256,288,384,312,384,324,256,336,384 };
-	int p7[18] = { 240,384,252,256,264,384,288,384,300,256,312,384,336,384,348,256,360,384 }; 
+	int p7[18] = { 240,384,252,256,264,384,288,384,300,256,312,384,336,384,348,256,360,384 };
 	setbkcolor(BLACK);
 	setcolor(2);
 	rectangle(0, 0, 415, 384);
@@ -126,13 +126,35 @@ int board()
 	fillellipse(228, 348, 12, 12);
 	fillellipse(228, 324, 12, 12);
 	fillellipse(228, 300, 12, 12);
-	fillellipse(228, 276, 12, 12
+	fillellipse(228, 276, 12, 12);
 
 
+	/* 2nd player*/
 
-}
-int main()
-{
-    return 0;
-}
+	setfillstyle(SOLID_FILL, YELLOW);
+	setcolor(8);
+	/*first quadrant*/
+	fillellipse(132, 12, 12, 12);
+	fillellipse(132, 36, 12, 12);
+	fillellipse(132, 60, 12, 12);
 
+	/*2nd quadrant*/
+	fillellipse(228, 12, 12, 12);
+	fillellipse(228, 36, 12, 12);
+	fillellipse(228, 60, 12, 12);
+	fillellipse(228, 84, 12, 12);
+	fillellipse(228, 108, 12, 12);
+
+	/* 3rd quadrant */
+
+	fillellipse(36, 372, 12, 12);
+	fillellipse(36, 348, 12, 12);
+	fillellipse(36, 324, 12, 12);
+	fillellipse(36, 300, 12, 12);
+	fillellipse(36, 276, 12, 12);
+
+	/* 4th quadrant */
+	fillellipse(348, 372, 12, 12);
+	fillellipse(348, 348, 12, 12);
+
+	
