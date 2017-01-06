@@ -8,14 +8,14 @@
 #include<ctype.h>
 #include <amp_graphics.h>
 
-union REGS in, out;
+ union REGS in, out;
 int welcome();
 int board();
 int callmouse()
 {
 	in.x.ax = 1;
-	int86(51, &in, &out)
-		return 1;
+	int86(51, &in, &out);
+			return 1;
 
 
 }
