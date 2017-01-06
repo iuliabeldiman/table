@@ -1,4 +1,5 @@
 #include <iostream>
+#include<comio.h>
 
 using namespace std;
 bool gameOver;
@@ -32,13 +33,15 @@ for (int i = 0; i < width+2; i++)
 		{
 			if (j == 0)
 				cout << "#";
-			else
+				if ( i==y && j==x)
+				cout<< "0";
+				else if(i==fruitY && j==fruitX)
+				cout<< "F";
+				else
 				cout << " ";
 				if (j==width-1)
 					cout<< "#";
-
-
-		}
+					}
 		cout<< endl;
 	}
 
@@ -49,7 +52,27 @@ for (int i = 0; i < width+2; i++)
 }
 void Input()
 {
-
+if(_kbhit())
+{
+    switch(_getch())
+    {
+         case 'a':
+         dir=LEFT;
+         break;
+         case 'd':
+         dir=RIGHT;
+         break;
+         case 'w':
+         dir=UP;
+         break;
+         case 's':
+         dir=DOWN;
+         break;
+         case 'x':
+         gameOver=true;
+         break;
+    }
+}
 }
 void Logic()
 {
