@@ -1,5 +1,5 @@
 #include <iostream>
-#include<comio.h>
+#include<conio.h>
 
 using namespace std;
 bool gameOver;
@@ -23,7 +23,7 @@ dir = STOP;
 }
 void Draw()
 {
-system("cls");
+     system("cls");
 for (int i = 0; i < width+2; i++)
 		cout << "#";
 		cout<< endl;
@@ -76,6 +76,25 @@ if(_kbhit())
 }
 void Logic()
 {
+switch(dir)
+{
+    case LEFT:
+    x--;
+    break;
+    case RIGHT:
+    x++;
+    break;
+    case UP
+   y--;
+      break;
+   case DOWN:
+   y++;
+      break;
+    default:
+    break;
+}
+ if(x > width || x< 0 || y >height || y < 0)
+ gameOver= true;
 
 }
 int main()
