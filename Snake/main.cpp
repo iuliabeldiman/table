@@ -36,22 +36,24 @@ for (int i = 0; i < width+2; i++)
 				cout << "#";
 				if ( i==y && j==x)
 				cout<< "0";
-				else if(i==fruitY && j==fruitX)
+				else
+				if( i == fruitY && j == fruitX)
 				cout<< "F";
 				else
 				{
+				     bool  print= false;
 				    for( int k=0; k< nTail; k++)
 				    {
-				        bool  print= false;
-				        if( tailX[k] == j && tailY[k] == i)
+				       if( tailX[k] == j && tailY[k] == i)
 				        {
 				            cout<< "o";
 				            print = true;
 				        }
 				    }
-				    if (!print)
+				     if (!print)
 				    cout<< " ";
 				}
+
 				cout << " ";
 				if (j==width-1)
 					cout<< "#";
@@ -93,6 +95,8 @@ void Logic()
 {  int prevX=tailX[0];
    int prevY=tailY[0];
    int prev2X, prev2Y;
+   tailX[0]= x;
+   tailY[0] =y;
    for (int i =1;i < nTail; i++ )
    {
        prev2X = tailX[i];
