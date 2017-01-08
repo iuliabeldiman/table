@@ -1,5 +1,6 @@
 #include <iostream>
 #include<conio.h>
+#include <cstdlib>
 
 using namespace std;
 bool gameOver;
@@ -48,6 +49,7 @@ for (int i = 0; i < width+2; i++)
 	for (int i = 0; i < width+2; i++)
 		cout << "#";
 		cout<< endl;
+		cout << "Score:" << score << endl;
 
 }
 void Input()
@@ -84,7 +86,7 @@ switch(dir)
     case RIGHT:
     x++;
     break;
-    case UP
+    case UP:
    y--;
       break;
    case DOWN:
@@ -95,7 +97,12 @@ switch(dir)
 }
  if(x > width || x< 0 || y >height || y < 0)
  gameOver= true;
-
+if (x == fruitX && y == fruitY )
+{
+    score +=10;
+    fruitX = rand() % width;
+	fruitY = rand() % height;
+}
 }
 int main()
 {
