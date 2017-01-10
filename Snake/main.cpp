@@ -27,19 +27,19 @@ void Draw()
 {
      system("cls");
 for (int i = 0; i < width+2; i++)
-		cout << "#";
+		cout << "!";
 		cout<< endl;
 	for (int i = 0; i < height;i++)
 	{
 		for(int j=0; j< width;j++)
 		{
 			if (j == 0)
-				cout << "#";
+				cout << "!";
 				if ( i==y && j==x)
 				cout<< "0";
 				else
 				if( i == fruitY && j == fruitX)
-				cout<< "F";
+				cout<< "B";
 				else
 				{
 				     bool  print= false;
@@ -47,7 +47,7 @@ for (int i = 0; i < width+2; i++)
 				    {
 				       if( tailX[k] == j && tailY[k] == i)
 				        {
-				            cout<< "o";
+				            cout<< "*";
 				            print = true;
 				        }
 				    }
@@ -55,15 +55,15 @@ for (int i = 0; i < width+2; i++)
 				    cout<< " ";
 				}
 
-				cout << " ";
+
 				if (j==width-1)
-					cout<< "#";
+					cout<< "!";
 					}
 		cout<< endl;
 	}
 
 	for (int i = 0; i < width+2; i++)
-		cout << "#";
+		cout << "!";
 		cout<< endl;
 		cout << "Score:" << score << endl;
 
@@ -145,7 +145,7 @@ int main()
 		Draw();
 		Input();
 		Logic();
-		Sleep(10);
+		//Sleep(10);
 	}
 
     return 0;
